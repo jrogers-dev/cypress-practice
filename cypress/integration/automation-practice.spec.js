@@ -8,7 +8,7 @@ describe("Rahul Shetty automation practice test suite", () => {
       cy.wait(1000)
     })
 
-    /*Radio button
+    //Radio button
     it("Can locate three radio buttons", () => {
         cy.get(".radioButton").should("have.length", 3)
     })
@@ -38,7 +38,7 @@ describe("Rahul Shetty automation practice test suite", () => {
       cy.get('#dropdown-class-example').should("have.value", "option2")
       cy.get('#dropdown-class-example').should("not.have.value", "option1")
     })
-    */
+    
 
     //Checkboxes
     it("Can check and uncheck any of the three checkboxes", () => {
@@ -55,7 +55,13 @@ describe("Rahul Shetty automation practice test suite", () => {
     //Tables: Fixed header
 
     //Hide/Show element
-
+    it("Can toggle and check the visibility of an element", () => {
+      cy.get('#displayed-text').should("be.visible")
+      cy.get('#hide-textbox').trigger("click")
+      cy.get('#displayed-text').should("not.be.visible")
+      cy.get('#show-textbox').trigger("click")
+      cy.get('#displayed-text').should("be.visible")
+    })
     //Mouse hover
 
     //iFrames
